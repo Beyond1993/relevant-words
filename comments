@@ -1,0 +1,49 @@
+Thank you for taking the time to apply for the Java Software Engineer position with us at Moogsoft. While we were impressed with your skills and background, we have decided to move forward with other candidates that are better aligned with our current needs. That being said, we will keep your resume on file and reach out should a position open up that may be a better fit. 
+
+Stuart wanted to send back some specific feedback for your benefit. Please take a look at his feedback below:
+
+I like the fact that he is really keen and that he realized that he was not quite ready for this position. I would suggest that we tell him to work on his object oriented and machine learning concepts and apply again later/next year.
+
+Pros :-
+
+- You used a well defined package to group your code (some people just use the default root package).
+
+- You defined a couple of well defined classes with different responsibilities rather than one mammoth class.
+
+- You provided some javadoc comments e.g. author/date and version.
+
+- Although I don’t think your use of threads is correct (see cons) it is good that you used classes like ConcurrentHashMap to take into account multi-threading issues.
+
+- It was good that you considered stop words, case and attempted to handle short phrases.
+
+- It was good that you provided a readme with some instructions and your thoughts.
+
+- You did not swallow exceptions and at least printed a stack trace.
+
+- Good use of core java libraries.
+
+- Nice that you provided build instructions (I have a preference for gradle but maven is fine).
+
+Cons :-
+
+- The AppTest class did not do anything useful. It would be better to not include it in the submission.
+
+- The names of the classes mostly matched their responsibilities but I felt that some classes were a bit muddled e.g. The RelevantWords class was responsible for both ‘reading in the input data’ and ‘figuring out the relevant words’. It would have been better to split these responsibilities between different classes.
+
+- The logic and responsibilities of the inner class HttpClient were confusing and it was not clear as to why there needed to be multiple threads.
+
+- It would have been better if the RelevantWords class returned a result (maybe a list of the relevant words) rather than printing them itself. That was it is up to the client of the class what they want to do. Maybe they want to print it but maybe they want to do something else (I think a couple of my comments are all related to slightly improving you object oriented design and splitting the responsibilities better).
+
+- The END_INDEX constant was confusing and seemed like it did not belong in the RelevantWords class. Even if you split the input logic into a different class I don’t think that this constant would belong. It is not good to have logic/constants that is not flexible enough to handle different inputs.
+
+- There was some odd formatting for some variables e.g. private ConcurrentHashMap<String, Integer> map was not all on one line.
+
+- Some lines/comments would have looked better if separated by a little whitespace.
+
+- Naming a variable of its type should be avoided if possible e.g. Instead of RelevantWords>>map maybe RelevantWords>>wordFrequency or RelevantWords>>wordFrequencyMap (if you must use the word map).
+
+- Not really a con but there was no real need for the constructor as all the variables could simply have been initialized at the point of declaration.
+
+- More descriptive code comments would have been useful. When you are writing the code something may be obvious to you but that is not always the case for someone else looking at the code.
+
+- It would have been nice to include a bit more in the readme about how this program could be improved if you have more time (not just that you would use a 3rdparty library like OpenNLP but some details on some logic that you could code yourself to improve it - This would allow you to show off any understanding of machine learning and nlp that you have).
